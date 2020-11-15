@@ -4,7 +4,7 @@
       <v-card>
         <v-card-title> Preview </v-card-title>
         <v-card-text>
-          <canvas id="preview" width="100%" height="600px"></canvas>
+          <div id="preview"></div>
         </v-card-text>
       </v-card>
     </v-col>
@@ -42,7 +42,9 @@
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="orange"><v-icon left>mdi-export</v-icon>Output</v-btn>
+          <v-btn color="orange" dark
+            ><v-icon left>mdi-export</v-icon>Output</v-btn
+          >
           <v-btn color="primary"
             ><v-icon left>mdi-content-save</v-icon>Save</v-btn
           >
@@ -51,3 +53,13 @@
     </v-col>
   </v-row>
 </template>
+<script>
+export default {
+  mounted() {
+    const a = new window.anichart.Bar();
+    a.width = document.querySelector('#preview').offsetWidth;
+    a.height = 400;
+    a.initCanvas('#preview');
+  },
+};
+</script>
