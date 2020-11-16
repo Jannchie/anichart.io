@@ -6,6 +6,7 @@
         <v-card-text>
           <div id="preview"></div>
         </v-card-text>
+        <anichart-ctl :anichart="anichart"></anichart-ctl>
       </v-card>
     </v-col>
     <v-col cols="12">
@@ -54,12 +55,24 @@
   </v-row>
 </template>
 <script>
+import AnichartCtl from '~/components/AnichartCtl.vue';
 export default {
-  mounted() {
-    const a = new window.anichart.Bar();
+  components: { AnichartCtl },
+  data() {
+    return { anichart: {} };
+  },
+  async mounted() {
+    const a = new window.anichart.Bar({
+      useCtl: true,
+      height: 400,
+      itemCount: 4,
+    });
+    this.anichart = a;
     a.width = document.querySelector('#preview').offsetWidth;
-    a.height = 400;
     a.initCanvas('#preview');
+    await a.loadCsv('./data/preview.csv');
+    await a.readyToDraw();
+    window.a = a;
   },
 };
 </script>
