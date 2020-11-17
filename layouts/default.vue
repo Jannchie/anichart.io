@@ -11,7 +11,7 @@
         <v-list-item
           v-for="(item, i) in items"
           :key="i"
-          :to="item.to"
+          :to="getLangPath(item.to)"
           router
           exact
         >
@@ -81,6 +81,11 @@ export default {
       miniVariant: true,
       title: 'Anichart.io',
     };
+  },
+  methods: {
+    getLangPath(to) {
+      return `/${this.$store.state.locale}${to}`;
+    },
   },
 };
 </script>

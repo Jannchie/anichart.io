@@ -1,0 +1,12 @@
+{
+  "app": {
+    "name": "Anichart"
+  },
+  "edit": {
+    "preview": "Preview"
+  },
+  "lang": {
+    "zh": "Chinese",
+    "en": "English"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "app": {
+    "name": "Anichart动态数据可视化"
+  },
+  "save": "保存",
+  "output": "导出",
+  "options": "配置项目",
+  "edit": {
+    "preview": "预览",
+    "title": "编辑"
+  },
+  "csv-file": "CSV文件",
+  "import-csv-file": "载入CSV文件",
+  "loading": "载入中",
+  "meta-table": "信息表",
+  "meta-table-desc": "用于存放一些不会变动的详细信息",
+  "data-table": "数据表",
+  "data-table-desc": "用于存放一些会变化的数据记录",
+  "lang": {
+    "zh": "简体中文",
+    "en": "英文"
+  }
+}

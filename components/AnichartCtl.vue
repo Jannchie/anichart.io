@@ -30,7 +30,6 @@ export default {
   },
   watch: {
     'anichart.currentFrame'(val) {
-      console.log(val);
       if (this.anichart.frameData !== undefined) {
         this.label = `${val + 1} / ${this.anichart.frameData.length}`;
         if (
