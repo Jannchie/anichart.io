@@ -63,15 +63,15 @@ export default {
   },
   async mounted() {
     const a = new window.anichart.Bar({
-      useCtl: true,
       height: 400,
+      output: false,
       itemCount: 4,
     });
-    this.anichart = a;
     a.width = document.querySelector('#preview').offsetWidth;
     a.initCanvas('#preview');
     await a.loadCsv('./data/preview.csv');
     await a.readyToDraw();
+    this.anichart = a;
     window.a = a;
   },
 };

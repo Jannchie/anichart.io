@@ -13,7 +13,8 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     script: [
       {
-        src: 'https://cdn.jsdelivr.net/npm/anichart/dist/anichart.min.js',
+        src:
+          'https://cdn.jsdelivr.net/npm/anichart@1.1.20/dist/anichart.min.js',
       },
     ],
   },
