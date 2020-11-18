@@ -1,10 +1,21 @@
 {
   "app": {
-    "name": "Anichart"
+    "name": "Anichart.io"
   },
+  "save": "Save",
+  "output": "Output",
+  "options": "Options",
   "edit": {
-    "preview": "Preview"
+    "preview": "Preview",
+    "title": "Edit"
   },
+  "csv-file": "CSV File",
+  "import-csv-file": "Import CSV File",
+  "loading": "Loading",
+  "meta-table": "Meta Table",
+  "meta-table-desc": "Used to store details that do not change.",
+  "data-table": "Data Table",
+  "data-table-desc": "Used to store data records that change.",
   "lang": {
     "zh": "Chinese",
     "en": "English"
