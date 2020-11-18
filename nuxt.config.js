@@ -23,7 +23,10 @@ export default {
   css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: ['~/plugins/i18n.js'],
+  plugins: [
+    '~/plugins/i18n.js',
+    { src: '~/plugins/codemirror.js', ssr: false },
+  ],
 
   router: {
     middleware: 'i18n',
