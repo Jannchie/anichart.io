@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col cols="7">
+    <v-col sm="7" cols="12">
       <v-card height="100%">
         <v-card-title> {{ $t('edit.preview') }} </v-card-title>
         <v-card-text>
@@ -9,7 +9,7 @@
         <anichart-ctl :anichart="anichart"></anichart-ctl>
       </v-card>
     </v-col>
-    <v-col cols="5">
+    <v-col sm="5" cols="12">
       <v-card height="100%">
         <v-card-title>{{ $t('options') }}</v-card-title>
         <v-card-text>
@@ -19,9 +19,6 @@
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="orange" dark
-            ><v-icon left>mdi-export</v-icon>{{ $t('output') }}</v-btn
-          >
           <v-btn color="primary" @click.stop="updateChart()"
             ><v-icon left>mdi-content-save</v-icon>{{ $t('save') }}</v-btn
           >
@@ -64,7 +61,7 @@ export default {
   data() {
     return {
       anichart: {},
-      options: '{ height: 400, output: false, itemCount: 4 }',
+      options: '{ height: 400, output: false, itemCount: 8 }',
     };
   },
   async mounted() {
@@ -83,7 +80,7 @@ export default {
       a.setOptions(temp);
       a.width = preview.offsetWidth;
       a.initCanvas('#preview');
-      await a.loadCsv('/data/preview.csv');
+      await a.loadCsv(`${this.$router.options.base}data/preview.csv`);
       await a.readyToDraw();
       this.anichart = a;
       window.a = a;

@@ -1,13 +1,9 @@
 import colors from 'vuetify/es5/util/colors';
 const routerBase =
-  process.env.DEPLOY_ENV === 'GH_PAGES'
-    ? {
-        base: '/anichart.io/',
-      }
-    : {};
+  process.env.DEPLOY_ENV === 'GH_PAGES' ? { base: '/anichart.io/' } : {};
 
 export default {
-  target: 'static',
+  static: { prefix: false },
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: '%s - anichart.io',
@@ -17,7 +13,9 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: `${routerBase}favicon.ico` },
+    ],
     script: [
       {
         src: 'https://cdn.jsdelivr.net/npm/anichart/dist/anichart.min.js',
