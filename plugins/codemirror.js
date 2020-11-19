@@ -17,12 +17,9 @@ Vue.use(VueCodemirror, {
     styleActiveLine: true,
     foldGutter: true,
     styleSelectedText: true,
-    modes: [
-      {
-        value: 'javascript',
-        label: 'Javascript',
-      },
-    ],
+    // scrollbarStyle: 'null',
+    lineWrapping: true,
+    mode: 'text/javascript',
     theme: 'vscode-dark',
   },
   events: ['scroll'],

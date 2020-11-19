@@ -1,12 +1,31 @@
 <template>
   <v-row>
-    <v-col cols="12">
-      <v-card>
+    <v-col cols="7">
+      <v-card height="100%">
         <v-card-title> {{ $t('edit.preview') }} </v-card-title>
         <v-card-text>
-          <div id="preview"></div>
+          <div id="preview" style="line-height: 0"></div>
         </v-card-text>
         <anichart-ctl :anichart="anichart"></anichart-ctl>
+      </v-card>
+    </v-col>
+    <v-col cols="5">
+      <v-card height="100%">
+        <v-card-title>{{ $t('options') }}</v-card-title>
+        <v-card-text>
+          <client-only placeholder="Codemirror Loading...">
+            <codemirror ref="cmEditor" v-model="options" />
+          </client-only>
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="orange" dark
+            ><v-icon left>mdi-export</v-icon>{{ $t('output') }}</v-btn
+          >
+          <v-btn color="primary" @click.stop="updateChart()"
+            ><v-icon left>mdi-content-save</v-icon>{{ $t('save') }}</v-btn
+          >
+        </v-card-actions>
       </v-card>
     </v-col>
     <v-col cols="12">
@@ -30,25 +49,6 @@
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn color="primary"
-            ><v-icon left>mdi-content-save</v-icon>{{ $t('save') }}</v-btn
-          >
-        </v-card-actions>
-      </v-card>
-    </v-col>
-    <v-col cols="12">
-      <v-card>
-        <v-card-title>{{ $t('options') }}</v-card-title>
-        <v-card-text>
-          <client-only placeholder="Codemirror Loading...">
-            <codemirror ref="cmEditor" v-model="options" />
-          </client-only>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn color="orange" dark
-            ><v-icon left>mdi-export</v-icon>{{ $t('output') }}</v-btn
-          >
-          <v-btn color="primary" @click.stop="updateChart()"
             ><v-icon left>mdi-content-save</v-icon>{{ $t('save') }}</v-btn
           >
         </v-card-actions>
@@ -96,3 +96,8 @@ export default {
   },
 };
 </script>
+<style>
+.CodeMirror {
+  height: 400px !important;
+}
+</style>

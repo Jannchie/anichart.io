@@ -1,8 +1,8 @@
 <template>
   <v-card-actions>
     <v-btn icon @click="play"
-      ><v-icon>{{ playIcon }}</v-icon></v-btn
-    >
+      ><v-icon>{{ playIcon }}</v-icon>
+    </v-btn>
     <v-slider
       v-model="anichart.currentFrame"
       inverse-label
@@ -32,6 +32,9 @@ export default {
     'anichart.currentFrame'(val) {
       if (this.anichart.frameData !== undefined) {
         this.label = `${val + 1} / ${this.anichart.frameData.length}`;
+        if (!this.playing) {
+          this.anichart.drawFrame(this.anichart.currentFrame);
+        }
         if (
           this.anichart.currentFrame === this.anichart.frameData.length - 1 &&
           this.playing
