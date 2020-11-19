@@ -17,7 +17,7 @@ Vue.use(VueCodemirror, {
     styleActiveLine: true,
     foldGutter: true,
     styleSelectedText: true,
-    // scrollbarStyle: 'null',
+    scrollbarStyle: 'null',
     lineWrapping: true,
     mode: 'text/javascript',
     theme: 'vscode-dark',

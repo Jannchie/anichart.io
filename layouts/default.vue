@@ -34,9 +34,22 @@
       </v-btn>
       <v-toolbar-title v-text="title" />
       <v-spacer />
-      <v-btn icon @click.stop="rightDrawer = !rightDrawer">
-        <v-icon>mdi-menu</v-icon>
-      </v-btn>
+      <v-menu v-model="showMenu" absolute offset-y style="max-width: 600px">
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn v-bind="attrs" text v-on="on">
+            <v-icon left>mdi-web</v-icon>{{ $t('language') }}
+          </v-btn>
+        </template>
+        <v-list>
+          <v-list-item
+            v-for="(item, index) in ['zh', 'en']"
+            :key="index"
+            @click.stop="changeLanguage(item)"
+          >
+            <v-list-item-title>{{ $t(`lang.${item}`) }}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
     </v-app-bar>
     <v-main>
       <v-container>
@@ -56,6 +69,7 @@ export default {
       clipped: false,
       drawer: false,
       fixed: true,
+      showMenu: false,
       items: [
         {
           icon: 'mdi-apps',
@@ -85,6 +99,11 @@ export default {
   methods: {
     getLangPath(to) {
       return `/${this.$store.state.locale}${to}`;
+    },
+    changeLanguage(lang) {
+      this.$router.push({
+        params: { lang },
+      });
     },
   },
 };
