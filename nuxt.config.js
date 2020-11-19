@@ -3,7 +3,7 @@ const routerBase =
   process.env.DEPLOY_ENV === 'GH_PAGES' ? { base: '/anichart.io/' } : {};
 
 export default {
-  static: { prefix: false },
+  target: 'static',
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: '%s - anichart.io',
