@@ -1,4 +1,10 @@
 import colors from 'vuetify/es5/util/colors';
+const routerBase =
+  process.env.DEPLOY_ENV === 'GH_PAGES'
+    ? {
+        base: '/anichart.io/',
+      }
+    : {};
 
 export default {
   target: 'static',
@@ -30,6 +36,7 @@ export default {
 
   router: {
     middleware: 'i18n',
+    ...routerBase,
   },
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
