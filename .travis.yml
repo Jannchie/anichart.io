@@ -2,7 +2,6 @@ language: node_js
 
 os: linux
 
-
 node_js:
   - '12'
 
@@ -15,14 +14,14 @@ branches:
     - master
 
 install:
-  - npm install
-  - npm run generate:gh-pages
+  - yarn install
+  - yarn generate:gh-pages
 
 script:
   - echo "Skipping tests"
 
 deploy:
-  stratege: git
+  strategy: git
   provider: pages
   cleanup: true
   token: $GITHUB_ACCESS_TOKEN
