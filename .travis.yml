@@ -18,6 +18,9 @@ install:
   - npm install
   - npm run generate:gh-pages
 
+script:
+  - echo "Skipping tests"
+
 deploy:
   stratege: git
   provider: pages
