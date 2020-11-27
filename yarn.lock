@@ -2530,10 +2530,10 @@ alphanum-sort@^1.0.0:
   resolved "https://registry.yarnpkg.com/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
   integrity sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM=
 
-anichart@1.3.5-13:
-  version "1.3.5-13"
-  resolved "https://registry.yarnpkg.com/anichart/-/anichart-1.3.5-13.tgz#1c226311737ecf1108a26cd276de6269b8975e68"
-  integrity sha512-FWUyfaWVZaZ4Jaj7OKALNrPCJwB+T/QwSTfpuktXJgQysV3P4dToxns1bbnggy0jwZ6RpRSP/mqmv4s4+AV83g==
+anichart@1.3.5:
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/anichart/-/anichart-1.3.5.tgz#0f4910e8fc6c7ae504379aa43091044092429f90"
+  integrity sha512-1haL6s94IEWzcPX8Auvpjtr8keRhxSTUjBSoMUHFqqJ/J3qP/EAERs1m1Xooh9WkjpWZ3X869mLTO5kscVNUXQ==
   dependencies:
     "@canvas/image" "^1.0.1"
     "@ffmpeg/ffmpeg" "^0.8.3"
@@ -3352,6 +3352,11 @@ capital-case@^1.0.3:
     tslib "^1.10.0"
     upper-case-first "^2.0.1"
 
+caseless@~0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
+  integrity sha1-G2gcIf+EAzyCZUMJBolCDRhxUdw=
+
 chalk@4.1.0, chalk@^4.0.0, chalk@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.0.tgz#4e14870a618d9e2edd97dd8345fd9d9dc315646a"
@@ -3596,6 +3601,11 @@ code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
   integrity sha1-DQcLTQQ6W+ozovGkDi7bPZpMz3c=
+
+codemirror@^5.41.0:
+  version "5.58.3"
+  resolved "https://registry.yarnpkg.com/codemirror/-/codemirror-5.58.3.tgz#3f0689854ecfbed5d4479a98b96148b2c3b79796"
+  integrity sha512-KBhB+juiyOOgn0AqtRmWyAT3yoElkuvWTI6hsHa9E6GQrl6bk/fdAYcvuqW1/upO9T9rtEtapWdw4XYcNiVDEA==
 
 collection-visit@^1.0.0:
   version "1.0.0"
@@ -11833,6 +11843,15 @@ vendors@^1.0.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/vendors/-/vendors-1.0.4.tgz#e2b800a53e7a29b93506c3cf41100d16c4c4ad8e"
   integrity sha512-/juG65kTL4Cy2su4P8HjtkTxk6VmJDiOPBufWniqQ6wknac6jNiXS9vU+hO3wgusiyqWlzTbVHi0dyJqRONg3w==
+
+verror@1.10.0:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/verror/-/verror-1.10.0.tgz#3a105ca17053af55d6e270c1f8288682e18da400"
+  integrity sha1-OhBcoXBTr1XW4nDB+CiGguGNpAA=
+  dependencies:
+    assert-plus "^1.0.0"
+    core-util-is "1.0.2"
+    extsprintf "^1.2.0"
 
 vfile-location@^3.2.0:
   version "3.2.0"
