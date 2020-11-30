@@ -2532,10 +2532,10 @@ alphanum-sort@^1.0.0:
   resolved "https://registry.yarnpkg.com/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
   integrity sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM=
 
-anichart@1.3.5-13:
-  version "1.3.5-13"
-  resolved "https://registry.yarnpkg.com/anichart/-/anichart-1.3.5-13.tgz#1c226311737ecf1108a26cd276de6269b8975e68"
-  integrity sha512-FWUyfaWVZaZ4Jaj7OKALNrPCJwB+T/QwSTfpuktXJgQysV3P4dToxns1bbnggy0jwZ6RpRSP/mqmv4s4+AV83g==
+anichart@1.3.5:
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/anichart/-/anichart-1.3.5.tgz#0f4910e8fc6c7ae504379aa43091044092429f90"
+  integrity sha512-1haL6s94IEWzcPX8Auvpjtr8keRhxSTUjBSoMUHFqqJ/J3qP/EAERs1m1Xooh9WkjpWZ3X869mLTO5kscVNUXQ==
   dependencies:
     "@canvas/image" "^1.0.1"
     "@ffmpeg/ffmpeg" "^0.8.3"
