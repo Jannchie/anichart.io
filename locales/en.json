@@ -20,5 +20,10 @@
     "zh": "Chinese",
     "en": "English"
   },
-  "language": "Language"
+  "language": "Language",
+  "demo": {
+    "title": "Demo",
+    "line": "Simple Line Chart",
+    "bar": "Simple Bar Chart"
+  }
 }

@@ -91,6 +91,11 @@ export default {
           title: 'Inspire',
           to: '/inspire',
         },
+        {
+          icon: 'mdi-chart-areaspline',
+          title: 'Demo',
+          to: '/demo-list',
+        },
       ],
       miniVariant: true,
       title: 'Anichart.io',

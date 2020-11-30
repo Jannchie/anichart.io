@@ -18,7 +18,11 @@ export default {
     ],
     script: [
       {
-        src: 'https://cdn.jsdelivr.net/npm/anichart/dist/anichart.min.js',
+        src:
+          'https://cdn.jsdelivr.net/npm/browserfs@1.4.3/dist/browserfs.min.js',
+      },
+      {
+        src: 'https://cdn.jsdelivr.net/npm/anichart@1.3.2/dist/anichart.min.js',
       },
     ],
   },
@@ -48,6 +52,8 @@ export default {
     '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    // typescript
+    '@nuxt/typescript-build',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
